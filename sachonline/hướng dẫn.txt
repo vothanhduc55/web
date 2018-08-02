@@ -1,0 +1,4 @@
+﻿tài khoản đăng nhập hệ thống quản trị
+username :admin , password :admin
+tài khoản người dùng có trong database. 
+tạo 1 database với tên bookonline , sau đó import file bookonline.sql vào phpmyadmin.
