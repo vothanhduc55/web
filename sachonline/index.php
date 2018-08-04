@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
             <div class="thumbnail">
-              <img data-src="img/img1.jpg" alt="">
+              <img data-src="" alt="">
               <div class="caption">
                 <h3>Các loại sách mới nhất</h3>
                 <p>
