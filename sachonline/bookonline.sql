@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2018 at 09:16 AM
+-- Generation Time: Aug 05, 2018 at 01:37 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -47,7 +47,7 @@ INSERT INTO `admin` (`admin_username`, `admin_password`) VALUES
 --
 
 CREATE TABLE `book` (
-  `book_id` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `book_id` int(11) NOT NULL,
   `book_type` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `book_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `book_author` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
@@ -62,21 +62,21 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`book_id`, `book_type`, `book_name`, `book_author`, `book_amount`, `book_ UnitPrice`, `punisher_id`, `book_image`) VALUES
-('bk001', 'VH', 'cuốn theo chiều gió', 'văn cao', 100, 35000, 'pun1', ''),
-('bk002', 'KT', 'Mạch điện tử', 'Trần Văn Tiến', 20, 200000, 'pun3', 'img1.jpg'),
-('bk003', 'KT', 'Toán Số', 'Ngọc Nga', 300, 20000, 'pun2', NULL),
-('bk004', 'KT', 'Đại số tuyến tính', 'không biết', 3000, 100500, 'pun1', NULL),
-('bk005', 'KT', 'Vi mạch vi mô', 'Cù lê Hoàng', 124, 20000, 'pun3', NULL),
-('bk006', 'KT', 'Giải tích 1', 'Lê Minh Triết', 192, 50000, 'pun2', NULL),
-('bk007', 'KT', 'GIải Tích 2', 'Lê Xuân Việt', 243, 20000, 'pun1', NULL),
-('bk008', 'KT', 'Nhập môn kĩ thuật', 'Nguyễn Văn A', 421, 75000, 'pun1', NULL),
-('bk009', 'KT', 'Lắp ghép robot', 'Trần Yến Nhi', 321, 25000, 'pun2', NULL),
-('bk010', 'KT', 'Hệ Thống mạng lưới điện', 'Nguyễn Văn B', 78, 80000, 'pun3', NULL),
-('bk011', 'VH', 'Nỗi buồn chiến tranh', 'Bảo Ninh', 3500, 65000, 'pun2', NULL),
-('bk012', 'VH', 'Chí Phèo', 'Nam Cao', 800, 20000, 'pun1', NULL),
-('bk013', 'TA', 'Tiếng Anh cho người mới bắt dầu ', 'James Vangos', 300, 12000, 'pun2', NULL),
-('bk014', 'TN', 'Truyện cổ tích dân gian', 'Văn Liên', 243, 30000, 'pun2', NULL),
-('bk015', 'TT', 'Doraemon Chú mèo máy tương lai toàn tập', 'Fujiko Fujio', 300, 15000, 'pun2', NULL);
+(1, 'VH', 'cuốn theo chiều gió', 'văn cao', 100, 35000, 'pun1', ''),
+(2, 'KT', 'Mạch điện tử', 'Trần Văn Tiến', 20, 200000, 'pun3', 'img1.jpg'),
+(3, 'KT', 'Toán Số', 'Ngọc Nga', 300, 20000, 'pun2', NULL),
+(4, 'KT', 'Đại số tuyến tính', 'không biết', 3000, 100500, 'pun1', NULL),
+(5, 'KT', 'Vi mạch vi mô', 'Cù lê Hoàng', 124, 20000, 'pun3', NULL),
+(6, 'KT', 'Giải tích 1', 'Lê Minh Triết', 192, 50000, 'pun2', NULL),
+(7, 'KT', 'GIải Tích 2', 'Lê Xuân Việt', 243, 20000, 'pun1', NULL),
+(8, 'KT', 'Nhập môn kĩ thuật', 'Nguyễn Văn A', 421, 75000, 'pun1', NULL),
+(9, 'KT', 'Lắp ghép robot', 'Trần Yến Nhi', 321, 25000, 'pun2', NULL),
+(10, 'KT', 'Hệ Thống mạng lưới điện', 'Nguyễn Văn B', 78, 80000, 'pun3', NULL),
+(11, 'VH', 'Nỗi buồn chiến tranh', 'Bảo Ninh', 3500, 65000, 'pun2', NULL),
+(12, 'VH', 'Chí Phèo', 'Nam Cao', 800, 20000, 'pun1', NULL),
+(13, 'TA', 'Tiếng Anh cho người mới bắt dầu ', 'James Vangos', 300, 12000, 'pun2', NULL),
+(14, 'TN', 'Truyện cổ tích dân gian', 'Văn Liên', 243, 30000, 'pun2', NULL),
+(15, 'TT', 'Doraemon Chú mèo máy tương lai toàn tập', 'Fujiko Fujio', 300, 15000, 'pun2', NULL);
 
 -- --------------------------------------------------------
 
@@ -86,20 +86,13 @@ INSERT INTO `book` (`book_id`, `book_type`, `book_name`, `book_author`, `book_am
 
 CREATE TABLE `order` (
   `order_id` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `book_id` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `book_id` int(11) NOT NULL,
   `user_id` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `order_phone` int(11) NOT NULL,
   `order_email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `order_amount` int(11) NOT NULL,
   `order_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `order`
---
-
-INSERT INTO `order` (`order_id`, `book_id`, `user_id`, `order_phone`, `order_email`, `order_amount`, `order_date`) VALUES
-('ord1', 'bk001', 'USR1', 935140297, '17/2 Phạm Ngọc Thạch', 2, '2018-07-27 10:28:41');
 
 -- --------------------------------------------------------
 
@@ -181,6 +174,16 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`);
 
 --
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `book`
+--
+ALTER TABLE `book`
+  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
 -- Constraints for dumped tables
 --
 
@@ -188,14 +191,14 @@ ALTER TABLE `user`
 -- Constraints for table `book`
 --
 ALTER TABLE `book`
-  ADD CONSTRAINT `fk_book_type` FOREIGN KEY (`book_type`) REFERENCES `type_book` (`book_type`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_book_type` FOREIGN KEY (`book_type`) REFERENCES `type` (`book_type`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_punisher_id` FOREIGN KEY (`punisher_id`) REFERENCES `punisher` (`punisher_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `order`
 --
 ALTER TABLE `order`
-  ADD CONSTRAINT `fk_book_id` FOREIGN KEY (`book_id`) REFERENCES `book` (`book_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_book_id` FOREIGN KEY (`book_id`) REFERENCES `book` (`book_id`),
   ADD CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 

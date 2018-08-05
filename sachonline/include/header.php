@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/cssheader.css">
     
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -52,9 +53,17 @@
                 <li><a href="./tatcasach.php">Tất cả sách</a></li>
                
                 <li><a href="#">Liên hệ</a></li>
-                <li><a href="./login.php" <button type="button" class="btn btn-default">Đăng nhập</button></a>
-                <li><a href="./dangki.php" <button type="button" class="btn btn-default">Đăng kí</button></a>
               </ul>
+              
+                   <ul class="list-inline header-top pull-right cssHD">
+                                   <li><a href="./login.php" <button type="button" class="btn btn-default">Đăng nhập</button></a>
+                                   
+                                    <li><a href="./dangki.php" <button type="button" class="btn btn-default">Đăng kí</button></a>
+                                    
+                    </ul>
+                
+               
+              
             </div>
           </nav>
           <!-- End Menu Bootstrap -->

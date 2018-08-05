@@ -43,7 +43,7 @@
                   } else {
                       $trang1 = ($get_trang * 8) - 8;
                   }
-                  $sql = "SELECT * FROM book, type_book where type_book.book_type=book.book_type and type_book.book_type ='TN' limit $trang1,8";	
+                  $sql = "SELECT * FROM book, type, punisher where type.book_type=book.book_type and type.book_type ='TN'and punisher.punisher_id = book.punisher_id limit $trang1,8";	
                   $result = mysqli_query($conn, $sql) or die("không thể thực hiện câu truy vấn 1");
                   
                   ?>
@@ -58,7 +58,7 @@
                   <td><?php echo "{$row['book_author']}";?></td>
                   <td><?php echo "{$row['book_amount']}";?> </td>
                   <td> <?php echo "{$row['book_ UnitPrice']}";?></td>
-                  <td> <?php echo "{$row['punisher_id']}";?> </td>
+                  <td> <?php echo "{$row['punisher_name']}";?> </td>
                   <td><img src="../img/<?php echo "{$row['book_image']}";?>" > </td>
                   <td>
                      <a class="delete" href="xoasachkithuat.php?book_id=<?php echo $row['book_id']; ?> "  ><i class="glyphicon glyphicon-trash"></i></a>
