@@ -58,9 +58,9 @@
                   <td> <?php echo "{$row['book_name']}";?></td>
                   <td><?php echo "{$row['book_author']}";?></td>
                   <td><?php echo "{$row['book_amount']}";?> </td>
-                  <td> <?php echo "{$row['book_ UnitPrice']}";?></td>
+                  <td> <?php echo "{$row['book_UnitPrice']}";?></td>
                   <td> <?php echo "{$row['punisher_name']}";?> </td>
-                  <td><img src="../img/<?php echo "{$row['book_image']}";?>" > </td>
+                  <td><img src="../img/<?php echo "{$row['book_image']}";?>" height=100px with=50px> </td>
                   <td>
                      <a class="delete" href="xoasachkithuat.php?book_id=<?php echo $row['book_id']; ?> "  ><i class="glyphicon glyphicon-trash"></i></a>
                   </td>

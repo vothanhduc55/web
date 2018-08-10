@@ -3,7 +3,7 @@
 <title> Trang chủ</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <link rel="stylesheet" type="text/css" href="css/cssheader.css">
 <link rel="stylesheet"  href="css/bootstrap.css">
 <link rel="stylesheet"  href="css/bootstrap.min.css">
@@ -25,7 +25,7 @@
     <div class="w3-right w3-hide-small">
       <a href="#projects" class="w3-bar-item w3-button" style="text-decoration: none">Giỏ hàng</a>
       <a href="#about" class="w3-bar-item w3-button" style="text-decoration: none">Đăng nhập</a>
-      <a href="#contact" class="w3-bar-item w3-button" style="text-decoration: none">Đăng kí</a>
+      <a href="register.php" class="w3-bar-item w3-button" style="text-decoration: none">Đăng kí</a>
     </div>
   </div>
 </div>

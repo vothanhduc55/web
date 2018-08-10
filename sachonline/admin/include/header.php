@@ -20,6 +20,7 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/them.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -56,7 +57,10 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Quản lí tài khoản</a>
+                        <a href="qltaikhoan.php"><i class="fa fa-fw fa-dashboard"></i> Quản lí tài khoản</a>
+                    </li>
+                    <li>
+                        <a href="them.php"><i class="fa fa-fw fa-table"></i>Thêm sách</a>
                     </li>
                     <li>
                         <a href="tables.html"><i class="fa fa-fw fa-table"></i> Quản lí đơn hàng</a>
